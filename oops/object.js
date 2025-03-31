@@ -69,4 +69,72 @@ this.greet = function(){
 
 const p1 = new Person("alkama", 18)
 
-console.log(p1)
+// console.log(p1)
+
+// 4.creating object using classes
+
+class Animal{
+
+    constructor(name, type){
+        this.name = name,
+        this.type = type
+    }
+
+    sound() {
+   console.log(`${this.name} makes sound`)
+    }
+}
+
+
+const dog = new Animal("Dog", "Mammal")
+// dog.sound()
+
+// 5. using Object.create()
+
+const animal = {
+    speak(){
+        console.log(`${this.name} makes a sound!`)
+    }
+}
+
+const cat = Object.create(animal)
+cat.name = "winter"
+
+// console.log(cat)
+// cat.speak()
+
+// <---------------------------------------------------------------------->
+
+//Operations in Objects 
+
+const user =  {
+name: "alkama", 
+"user role": "admin"  // you can also write key in "user role" way is there is any space needed
+}
+
+
+// a. accessing th value
+
+// console.log(user)
+// console.log(user.name)
+// console.log(user['user role']) // this is the way of access this type of key 
+
+// b. adding the value
+
+user.age = 12 // add age inside the user 
+// console.log(user)
+
+
+// c. delete the key with value
+
+// delete user.name
+// console.log(user)
+// delete user['user role']
+// console.log(user)
+
+// 2.iterate in objects
+
+for(let key in user){
+    console.log(`${key}: ${user[key]}`)
+}
+
